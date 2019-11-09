@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>UFO Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="dokumenti.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="indeks.html">UFO Sightings
+            <img class="nav-ufo" src="static/images/ufo.svg">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>UFO Sightings</h1>
+      <p>The Truth is Out There</p>
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a Date</label>
+                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                        <label for="date">Enter a State</label>
+                        <input class="form-control" id="state" type="text" placeholder="KS">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                  <button id="reset-btn" type="button" class="btn btn-default">Reset Table</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="ufo-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Date</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">Country</th>
+                  <th class="table-head">Shape</th>
+                  <th class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">UFO Sightings</span>
+    </footer>
+<br> The mass culture around UFO delusions have a production function of disbelief: generally for authority, but particularly for religion, government, and science. */ 
+<br>If one believes a UFO or aliens are real and here, then there exists an alternate explanation for events previously ascribed to the divine. Angels, religion, that whole boatload can be dumped into the sea of old, disused ideas. --> Premodern religions are replaced by postmodern one.*/
+<br>One is also allowed to disbelieve Science, since it is created and controlled by the State: the gatekeepers of truth can't be trusted. The technology is indisputably real, but the process of science can be dismissed since advances in knowledge are explained by alien encounters. */
+<br > Further, UFOlogy allows a convenient way to dismiss the accomplishments of early, non-European societies. Angor Wat, Tenochtitlan, Luxor are no longer the jewels of non-western, non-white societies. They are products of aliens. Ancient brown people are no longer to be seen as intellectual masters of their times, but merely as the dumb slaves of light skinned (grey) foreign colonists. Belief in UFOs is fundamentally racist and reinvigorates the colonial project. */
+<br> Suppose a malign foreign power were to want to create a fifth column to weaken the west.  How to destroy Liberalism, individualism, modernism, instiutionalism, transnationalism, egalitarianism, democracy, and faith in the representativeness of government?    Propegate belief in near omniscient alien beings. */
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script> 
+  <script src= "method3.js"></script>
+</body>

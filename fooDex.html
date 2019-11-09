@@ -1,0 +1,171 @@
+<!-- 
+VIEW ON FULL SCREEN - WIDE SCREEN -- TO GET THE FULL EFFECT. 
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>UFO Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="static/css/fooStyle.css">  
+  
+<!-- 
+so i wanted a background that was literally random, not just metaphorically.  
+in situ, that meant call random style sheets.  no dice.
+  <link rel="stylesheet" href="/static/css/<?php echo(mt_rand(1,5));?>.css" />  
+  <link href="/static/css/<?php echo mt_rand(1, 5); ?>.css" rel="stylesheet" type="text/css"/> 
+
+  <link rel="stylesheet" href="static/css/" + (Math.floor(Math.random()*5)+1) + ".css"> 
+
+ obviously, this owuld go below in the body.
+  <script type="text/javascript">
+    var randBgImg=["/static/css/1.png", "/static/css/2.png", "/static/css/3.png"]
+    document.body.style.background='white url('+Math.floor(Math.random()*randBgImg.length)]+')')
+</script>
+--> 
+
+
+<!-- 
+
+this would go in to css file to overlay the nasa bg image with the bosch element image. 
+ #blaj{ 
+ position: absolute; 
+ top:30px; 
+ right: 0; 
+ width: 30px; 
+ height: 30px;
+ background-color: rgba(255, 255, 255, .5);
+ }
+
+ #blah{ 
+ position: absolute; 
+ top:30px; 
+ right: 0; 
+ width: 30px; 
+ height: 30px;
+ opacity: 0.5;
+ }
+
+-->
+
+</head>
+
+<body>
+  <script src="static/js/fooData.js"></script>
+  <script src="static/js/fooApp.js"></script>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="fooDex.html">UFO Sightings
+            <img class="nav-ufo" src="static/images/ufo.svg">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>برنامه نویسان مریخی</h1> 
+      <h3>آنها ویزای H-1B دارند.</h3>
+      <p>The Earth Sun is a very loud black box radiator: No One Can Hear Us. </p> 
+      <p>Even if they could, Atomic Fire will have cleansed the Earth </p>
+      <p>before your little alien/angel/omniscient God-substitutes get here.</p>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Select by Date</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="dateQuery">
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a Date</label>
+                        <input class="form-control" id="when" type="text" placeholder="3/14/15">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="dateQuery" type="button" class="btn btn-default" style="background: url(static/images/dana.png)" onclick="dateQuery()">click to select date</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Select by State</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="stateQuery">
+                      <li class="filter list-group-item">
+                        <label for="state">enter state abbrev</label>
+                        <input class="form-control" id="where" type="text" placeholder="ks">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="stateQuery" type="button" class="btn btn-default" style="background: url(static/images/fox.png)" onclick="stateQuery()">click to select state</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+            <div class="panel-heading">Select by Shape</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="shapeQuery">
+                      <li class="filter list-group-item">
+                        <label for="shape">enter shape</label>
+                        <input class="form-control" id="what" type="text" placeholder="light">
+                      </li>
+                    </ul>
+                  </div>
+                <button id="shapeQuery" type="button" class="btn btn-default" style="background: url(static/images/cigman.png)"onclick="shapeQuery()">click to select shape</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table id="ufo-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Date</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">Country</th>
+                  <th class="table-head">Shape</th>
+                  <th class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">UFO Sightings</span>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="static/js/fooData.js"></script>
+  <script src="static/js/fooApp.js"></script>
+</body>
+
+
+
+
+</html>
